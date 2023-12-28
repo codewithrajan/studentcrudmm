@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    {{>header}}
+</head>
+
+<body>
+    {{>nav}}
+    <div class="container-fluid">
+
+        <div class="text-danger bg-infto mt-3">This is bootstrap testing</div>
+
+
+        <div class="bg-success">
+
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Sr Number</th>
+                        <th scope="col">Roll</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Course</th>
+                        <th scope="col">Update</th>
+                        <th scope="col">Delete</th>
+                    
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each students}}
+
+                    <tr>
+                        <td>{{@index}}</td>
+                        <td>{{this.sroll}}</td>
+                        <td>{{this.sname}}</td>
+                        <td>{{this.semail}}</td>
+                        <td>{{this.scourse}}</td>
+                        <td><a href="/update?sroll={{this.sroll}}">Update</a></td>
+                        <td><a href="/delete?sroll={{this.sroll}}">Delete</a></td>
+                    </tr>
+                    {{/each}}
+
+                </tbody>
+            </table>
+        </div>
+        <div class="btn btn success text-danger bg-success"><a href="/registration" style="text-decoration: none; color:black">Add Student</a></div>
+        {{>footer}}
+    </div>
+
+
+</body>
+
+</html>

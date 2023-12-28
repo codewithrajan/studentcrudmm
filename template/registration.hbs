@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registraion</title>
+    {{>header}}
+</head>
+<body>
+    {{>nav}}
+    <div class="container">
+        <div class="text-danger text-center h2">Student Form</div>
+
+
+        <form action="submit " method="post">
+        <label for="sroll">Student roll Number</label>
+        <input type="number" name="sroll" id="sroll"><br><br>
+
+        <label for="name">Student Name</label>
+        <input type="text" name="sname" id="sname"><br><br>
+        <label for="email">Student email</label>
+        <input type="email" name="semail" id="semail"><br><br>
+        <label for="course">Course</label>
+        <input type="text" name="scourse" id="scourse"><br><br>
+        <input type="submit" value="Register"> <input type="reset" value="Cancel">
+
+        </form>
+
+    <div>
+
+    </div>
+    </div>
+    {{>footer}}
+    
+    
+</body>
+</html>

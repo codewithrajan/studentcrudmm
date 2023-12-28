@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registraion</title>
+    {{>header}}
+</head>
+<body>
+    {{>nav}}
+    {{!-- <div>{{student.[0].sname}}</div> --}}
+    
+  <!-- Your input fields here -->
+
+    <div class="container">
+        <div class="text-danger text-center h2">Update Student Form</div>
+        <form action="/updatesubmit " method="post">
+        <label for="sroll">Student roll Number</label>
+        <input type="number" name="sroll" id="sroll" readonly value="{{student.[0].sroll}}"><br><br>
+
+        <label for="name">Student Name</label>
+        <input type="text" name="sname" id="sname" value="{{student.[0].sname}}"><br><br>
+        <label for="email">Student email</label>
+        <input type="email" name="semail" id="semail" value="{{student.[0].semail}}"><br><br>
+        <label for="course">Course</label>
+        <input type="text" name="scourse" id="scourse" value="{{student.[0].scourse}}"><br><br>
+        <input type="submit" value="Update"> 
+        <button><a href="/" style="text-decoration: none;">Back</a></button>
+
+        </form>
+  
+    <div>
+
+    </div>
+    </div>
+    {{>footer}}
+    
+    
+</body>
+</html>
